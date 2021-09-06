@@ -6,7 +6,7 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/y_bot_echo.png') {
+    if(mySrc.includes('y_bot_echo')) {
       myImage.setAttribute('src','images/full_body_chart.png');
     } else {
       myImage.setAttribute('src','images/y_bot_echo.png');

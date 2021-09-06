@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
-    <img src="images/y_bot_echo.png" alt="My test image" height=512px>
+    <img src="images/y_bot_echo.png" alt="My test image" height=512px/>
 	<h1>My main heading</h1>
 	<h2>My top level heading</h2>
 	<h3>My subheading</h3>
@@ -21,10 +21,40 @@
 	  <li>Vastus Medialis</li>
 	</ol>
 	
+	
+	<picture>
+	<source media="(min-width:1200px)" srcset="images/explain_mouse.png" />
+	<source srcset="images/explain_mouse_narrow.png" />
+	<img alt="My adaptive image" height=256px 
+		 src= "images/explain_mouse.png"/>
+	
+	</picture>
+	
+	<table>
+	<tr>
+		<th>Col 1</th>
+		<th>Col 2</th>
+		<th>Col 3</th>
+	</tr>
+	<tr>
+		<td>A</td>
+		<td>B</td>
+		<td>C</td>
+	</tr>
+	<tr>
+		<td>D</td>
+		<td>E</td>
+		<td>F</td>
+	</tr>
+	<tr>
+		<td>G</td>
+		<td>H</td>
+		<td>I</td>
+	</tr>
+	</table>
+	
 	<a href="https://www.google.com">Get me out of here!</a>
-	
 	<button>Change user</button>
-	
 	<script src="scripts/main.js"></script>
   </body>
 </html>
