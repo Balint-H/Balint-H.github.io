@@ -96,10 +96,7 @@ h2 {
 	padding: 60px 0;
 }
 
-.banner-wrap {
-	padding-bottom: 95%;
-	width: 50%;
-}
+
 
 .item-details h3 + p {
 	font-style: italic;
@@ -216,22 +213,6 @@ footer a{
   margin-right: auto;
 }
 
-.banner-wrap .image-cropper {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-left: auto;
-}
-
-.banner-wrap .image-cropper  img {
-  display: inline;
-  height: 100%;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .box {
    display: flex;
@@ -275,12 +256,31 @@ footer a{
 }
 
 
-@media screen and (max-width:382px) {
+@media screen and (max-width:750px) {
 	
 	h1 {
 		line-height: 1;
 		margin-bottom: 15px;
 	}
 	
+	.content-wrap .image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: auto;
+}
+	.content-wrap .image-cropper  img {
+  display: inline;
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-wrap {
+	padding-bottom: 25%;
+}
 
 }
