@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype Page</title>
+    <title>Balint Hodossy's Page</title>
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
 			
 			<div class="box">
 			<span style=""> <h1>Balint Hodossy</h1>
-			<h2>PhD Student, Imperial College London</h2> </span>
+			<h2>Simulation Engineer, Imperial College London</h2> </span>
 			<div class="image-cropper">
 			  <img style="vertical-align:middle" src="images/red_shirt.jpg" class="rounded" />
 			</div>
@@ -30,8 +30,8 @@
 			
 			
 
-			<p>I'm a Research Associate in Dario Farina's Neuromechanics and Rehabilitation Technology group. I'm from Hungary, but I've been living in London since 2016. My research interest is understanding human kinematics to build and control devices that support it.</p>
-			<p>This is a work in progress site show-casing what I've been up to. It will be updated with featured projects and additional information. Until then, here's <a href="texts/Balint_Hodossy_CV_2022.pdf"> my one page CV</a>.</p> 
+			<p>I'm a Research Associate in Dario Farina's Neuromechanics and Rehabilitation Technology group. I'm from Hungary, but I've been living in London since 2016. My research interest is understanding human movement and build devices that support it.</p>
+			<p>I'd like to record what I've been up to on this site. If you'd prefer a summary, here's <a href="texts/Balint_Hodossy_CV_2025.pdf"> my CV</a>.</p> 
 			</div>
 	  </header>
 	  
@@ -45,80 +45,149 @@
 <!-- -->
 
 	  
-	  <section class="projects border-separator">
-		  <div class="content-wrap">
+	  <section class="projects">
+		  <div class="content-wrap  border-separator">
 			<h2>Past Work</h2>
-			<p>More of my projects are documented at <a href="https://github.com/Balint-H">github.com/Balint-H</a>.</p>
-
-
-			<section class="project-item">
-			  <img src="images/sim_pic_3.png" alt="If at first you don't succeed... [An image of simulated prosthesis user celebrating standing successfully while past versions surround them] ">
-			  <h3>PhD Thesis</h3>
-			  <p>Written after my 4 year PhD at Imperial, titled <b>"Learning Steps: Models of Intent-Driven Lower Limb Prosthesis Use"</b>. It essentially compiles the 4 manuscripts I wrote into one document, aiming to merge EMG-based intent estimation models with RL-trained locomotion models. <br/>(It is shared under CC BY-NC 4.0.)</p>
-			  <a class="btn" href="texts/BKH_Thesis_online.pdf" target="_blank">Read my Thesis</a>
-			</section>
 			
-		  </div>
+			<section class="project-item">
+        <div class="project-item-split">
+          <img src="images/sim_pic_3.png" alt="If at first you don't succeed... [An image of simulated prosthesis user celebrating standing successfully while past versions surround them] ">
+          <div>
+            <h3>PhD Thesis</h3>
+            <p>Written after my 4 year PhD at Imperial, titled <b>"Learning Steps: Models of Intent-Driven Lower Limb Prosthesis Use"</b>. It essentially compiles the 4 manuscripts I wrote into one document, aiming to merge EMG-based intent estimation models with RL-trained locomotion models. <br/>(It is shared under CC BY-NC 4.0.)</p>
+            <a class="btn" href="texts/BKH_Thesis_online.pdf" target="_blank">Read my Thesis</a>
+          </div>
+        </div>
+        <!-- Subproject -->
+        <details>
+        <summary><div>Click here for summaries of the technical chapters<div/></summary>
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/sals.jpg" alt="An image of simulated prosthesis user progressing from footflat to toe-off phase of gait.">
+          <div>
+          <h4>Shared Autonomy Locomotion Synthesis With a Virtual Powered Prosthetic Ankle</h4>
+          <p>The core part of my project! I used RL to learn a gait policy for a humanoid agent to follow arbitrary walking paths. Then I introduced a second agent that controlled one of the ankles - representing an intent driven prosthes.</p>
+          <a class="btn" href="https://doi.org/10.1109/TNSRE.2023.3336713" target="_blank">Full article in TNSRE</a>
+          <a class="btn" href="https://doi.org/10.1109/TNSRE.2023.3336713/mm1" target="_blank">Demo video</a>
+          </div>
+        </div>
+        
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/tcn_setup.jpg" alt="Black and white picture of high-density electromyography grid placements on a subject, and motion capture marker placements.">
+          <div>
+          <h4>Leveraging High-Density EMG to Investigate Bipolar Electrode Placement for Gait Prediction Models</h4>
+          <p>A much needed address of the location specificity of the muscle signal decoding methods I take in my EMG work. I was surprised that simply sampling electrode locations randomly during training ended up working so well!</p>
+          <a class="btn" href="https://doi.org/10.1109/THMS.2024.3371099" target="_blank">Full article in THMS</a>
+          </div>
+        </div>
+        </section>
+        
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/hlie_abstr.jpg" alt="A visual abstract illustrating body posture and EMG, and the walking path they are used to predict.">
+          <div>
+          <h4>High-Level Locomotion Intent Estimation From Electromyography and Body Posture</h4>
+          <p>Translating my EMG models to high-level intent - so turns, stops, pivots instead of just straight walking. This abstract intent can be synthesized in simulation, which would mean not needing to simulate EMG for Sim2Real.</p>
+          <a class="btn" href="https://doi.org/10.36227/techrxiv.174123565.53083000/v1" target="_blank">Read preprint</a>
+          </div>
+        </div>
+        </section> 
+        
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/sf_abstr.jpg" alt="A simulated prosthesis user stepping on an obstacle with a compliant prosthesis.">
+          <div>
+          <h4>Towards a Virtual Gait Lab: Testing Prosthetics with Dynamically Simulated Subjects</h4>
+          <p>I had the chance to work with Antonio Bicchi's lab - together with Matteo Crotti, we modelled the <a href=https://doi.org/10.1109/HUMANOIDS.2016.7803423>IIT SoftFoot</a>. I extended my locomotion agents to obstacles and slopes, and evaluated the advantage of the compliant foot. Manuscript under review.</p>
+          <a class="btn" href="https://doi.org/10.36227/techrxiv.174119190.04989663/v1" target="_blank">Read preprint</a>
+          </div>
+        </div>
+        </section>
+        </details>
+        <!---->
+      </section>
+      <section class="project-item">
+      <div class="project-item-split">
+          <img src="images/masters.jpg" alt="Diagram of electrode and motion capture marker placements">
+          <div>
+            <h3>Master's Thesis</h3>
+            <p>This was my first long-term project with biosignal processing, motion capture and machine learning, titled <b>"Temporal Convolutional Network Based Trunk Muscle Signal
+ Decoding for Exoskeleton Control"</b>. For significant portion of it I discuss how to mitigate ECG corruption in trunk EMG - a serious issue of traditional EMG control. Turns out TCNs simply learn to filter it out on their own!<br/>(It is shared under CC BY-NC 4.0.)</p>
+            <a class="btn" href="texts/BKH16_MEng_report_final.pdf" target="_blank">Read the Thesis</a>
+          </div>
+      </div>
+      </section>
+      <p>My other publications can be found <a href=https://scholar.google.com/citations?user=ReYkgnEAAAAJ>on Scholar</a>. Also, many of my projects are documented and available at <a href="https://github.com/Balint-H">github.com/Balint-H</a>.</p>
+		  </div> 
 	  </section>
 	  
 	
 	
-<!--
+<!----->
 	  
-		<section class="work">
-		  <div class="content-wrap item-details border-separator">
-			<h2>Work Experience</h2>
-			<p>Optional paragraph for work experience summary. Not a part of the job details. Delete if not being used.</p>
-
-			
-			<section class="job-item">
-			  <div class="job-details">
-			    <h3>Job title</h3>
-				<p>Company Name</p>
-				<p>Date at job</p>
-			  </div>
-			  <div class="job-summary">
-				<p>Job summary goes here. Add as many paragraphs as you need.</p>
-				<p>Optional list:</p>
-				<ul>
-				  <li>Delete this list if you don't need it.</li>
-				  <li>Created...</li>
-				  <li>Lead...</li>
-				  <li>Responsible for...</li>
-				</ul>
-			  </div>
-			</section>
-			
-			<section class="job-item">
-			  <div class="job-details">
-			    <h3>Job title</h3>
-				<p>Company Name</p>
-				<p>Date at job</p>
-			  </div>
-			  <div class="job-summary">
-				<p>Job summary goes here. Add as many paragraphs as you need.</p>
-				<p>Optional list:</p>
-				<ul>
-				  <li>Delete this list if you don't need it.</li>
-				  <li>Created...</li>
-				  <li>Lead...</li>
-				  <li>Responsible for...</li>
-				</ul>
-			  </div>
-			</section>
-		  </div>
+		<section class="side-projects">
+		  <div class="content-wrap  border-separator">
+			<h2>Side projects</h2>
+			There are some side projects that I'm particularly fond of, or are not listed on my GitHub.
+			<section class="project-item">
+        <div class="project-item-split">
+          <div></div>
+          <div></div>
+        </div>
+        <!-- Subproject -->
+        <details>
+        <summary><div>Click here to see them!<div/></summary>
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/hand.jpg" alt="An image of simulated prosthetic hand giving the OK symbol.">
+          <div>
+          <h4>Simulating Wearable Robotics Workshop</h4>
+          <p>This repo was the yearly evolving content for the workshop I hosted at the Summer School of Neurorehabilitation 2023-25. Now I use it to introduce RL and physics simulation methods to someone. Usually I don't end up using all the content that gathered up all the years - there's examples for simulating a robotic hand, finding a controller for a powered ankle exoskeleton, implementing LQR controllers for balancing and much more!</p>
+          <a class="btn" href="https://github.com/Balint-H/ssnr_sim" target="_blank">See GitHub Repo</a>
+          </div>
+        </div>
+        
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/tennis.jpg" alt="A musculoskeletal human returning a table tennis rally.">
+          <div>
+          <h4>MyoChallenge 24/25</h4>
+          <p>I was part of the organizing team of the MyoChallenge in 2024 and 2025. These were programming competitions at NeurIPS, tasking participants with controlling complex musculoskeletal models to achieve various tasks. Each year I contributed to designing and developing one of the challenges. In 2024 I helped with the bimanual manipulation task, and in 2025 I helped with the tabletennis task.</p>
+          <a class="btn" href="https://sites.google.com/view/myosuite/myochallenge/myochallenge-2025" target="_blank">Visit website</a>
+          <a class="btn" href="http://openreview.net/forum?id=2vkf3Wkw2v" target="_blank">Preprint of MC24</a>
+          </div>
+        </div>
+        </section>
+        
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/conf.jpg" alt="Illustration of a handshake">
+          <div>
+          <h4>Student Led Conference</h4>
+          <p>During our first year of PhD students in my programme, we decided to organize a conference! Covid had different plans. We improvised, and managed to pivot to an online event. Served as great distraction during lockdown.</p>
+          <a class="btn" href="https://www.cdtpando.com/conference-2021" target="_blank">Visit the debrief page</a>
+          </div>
+        </div>
+        
+        <section class="subproject-item">
+        <div class="project-item-split">
+          <img src="images/tabletop.jpg" alt="Illustration of a handshake">
+          <div>
+          <h4>Roleplaying games</h4>
+          <p>Each year I try to host 1-2 stories as a game master for my friends, using adventure plotlines I've written over the years. I'm working on releasing a module along with handouts such maps, newspapers, posters and puzzles I've made!</p>
+          </div>
+        </div>
+        </section> 
+        </details>
+        <!---->
+      </section>
 		</section>
-		
+		<!---->
 	  
-		<section class="education">
+		<section class="end-banner">
 		  <div class="content-wrap item-details">
-			<h2>Education</h2>
-
-			<section>
-			  <h3>School name - City</h3>
-			  <p>Designation received or program name, year attended</p>
-			  <p>Summary or accomplishments.</p>
-			</section>
+			
 		  </div>
 		</section>
 	  <!-- -->
@@ -130,7 +199,7 @@
 
 			<!-- Social media and contact links. Add or remove any networks. -->
 			<ul class=contact-list>
-			  <li><a href="mailto:bkh16@ic.ac.uk">bkh16@ic.ac.uk</a></li>
+			  <li><u>bkh16[at]ic.ac.uk</u></li>
 			  <li><a href="https://www.linkedin.com/in/b%C3%A1lint-hodossy-90856513a/" target="_blank">LinkedIn</a></li>
 			</ul>
 		  </div>

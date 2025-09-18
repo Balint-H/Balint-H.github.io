@@ -67,6 +67,51 @@ h2{
 	font-size: 32px;
 }
 
+summary {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  align-items: center; 
+  color: #0d132150;
+  font-size: 17px;
+  border-bottom: 2px solid #0d132150;
+  column-gap: 20px;
+  cursor: pointer; 
+  margin-top:15px;
+}
+
+.side-projects summary {
+  color: #FFFFFF;
+}
+
+summary::before {
+ font-size: 20px;
+ color: #0d132150;
+ font-family: sans-serif;
+ content: "▶";
+ cursor: pointer;
+ grid-column: 1;
+}
+
+details:open > summary::before {
+ font-size: 18px;
+ content: "▼";
+}
+
+
+summary > * {
+  grid-column: 2; 
+}
+
+details:open > summary {
+  border-bottom: 0px;
+}
+
+summary .center-text {
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+
 h1, h2 {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
@@ -96,7 +141,9 @@ h2 {
 	padding: 60px 0;
 }
 
-
+p {
+  text-align: justify;
+}
 
 .item-details h3 + p {
 	font-style: italic;
@@ -107,7 +154,7 @@ h2 {
 }
 
 .border-separator > section {
-	border-bottom: 2px solid #0d132150
+  padding-bottom: 50px;
 }
 
 .border-separator > section:last-of-type{
@@ -126,11 +173,20 @@ header {
 /* Projects
 ------------------------------*/
 .projects {
-	background: #FBFAEE;
+	background: #FFFFFF;
 }
 
 .projects .btn{
-	color: #FBFAEE;
+	color: #FFFFFF;
+	background: rgb(101,170,165);
+	text-decoration: none;
+	padding: 8px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.side-projects .btn{
+	color: #FFFFFF;
 	background: rgb(101,170,165);
 	text-decoration: none;
 	padding: 8px;
@@ -150,14 +206,45 @@ header {
 	margin-top: 0;
 }
 
+.projects .project-item p{
+  text-align: justify;
+}
+
 .projects image
 
 
-
-
-/* Work Experience
+/* Subprojects
 ------------------------------*/
-.work {
+
+.project-item .subproject-item {
+	overflow: hidden;
+}
+
+.project-item .subproject-item h4 {
+  font-size: 15px;
+  margin-block-start:0px;
+  margin-block-end:0px;
+}
+
+.project-item .subproject-item p {
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.project-item .subproject-item img {
+  width: 200px;   
+  max-width: 100%;
+  margin-top: 10;
+}
+
+
+
+
+
+
+/* Project Experience
+------------------------------*/
+.side-projects {
 	background: #3E5775;
 	color: #FBFAEE;
 }
@@ -167,10 +254,10 @@ header {
 	background-size: cover;
 }
 
-/* Education
+/* End banner
 ------------------------------*/
 
-.education {
+.end-banner {
 	background-image: url("../images/glowy.png");
 	background-size: cover;
 }
@@ -196,7 +283,13 @@ footer a{
 	display: inline-block;
 }
 
+.contact-list u {
+	display: inline-block;
+}
+
 .content-wrap .image-cropper {
+  width: 100%;
+  height: 100%;
   width: 200px;
   height: 200px;
   position: relative;
@@ -205,13 +298,15 @@ footer a{
   margin-left: auto;
 }
 
+
 .content-wrap .image-cropper  img {
   display: inline;
   height: 100%;
+  max-width:200px;
+  max-height:200px;
   width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
+  margin: 0 auto;
+  }
 
 
 .box {
@@ -224,17 +319,52 @@ footer a{
 @media screen and (min-width:750px) {
 	
 	.projects .project-item img{
-	float: left;
-	padding: 0 0 25px 0;
-	margin-right: 20px;
-	width: 300px;
+    justify-self: start;  
+    width: 100%;       
+    max-width: 300px;  
+    height: auto;
 	}
+
+  
+  .projects .subproject-item img{
+	  justify-self: end;  
+    width: 100%;       
+    max-width: 250px;
+    margin-right: 7px;
+    margin-top: 20px;
+    height: auto;
+	}
+  
+  .side-projects .subproject-item img{
+	  justify-self: end;  
+    width: 100%;       
+    max-width: 250px;
+    margin-right: 7px;
+    margin-top: 20px;
+    height: auto;
+	}
+  
+  
 
 	.job-item {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		column-gap: 20px;
 	}
+  
+  .project-item-split {
+		display: grid;
+		grid-template-columns: 1.3fr 2fr;
+		column-gap: 20px;
+    padding-top: 0px;
+	}
+  
+  .subproject-item .project-item-split {
+    border-left: 2px solid #0d132150;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    margin-left:7px;
+  }
 
 	.contact-list {
 		display: flex;
@@ -242,6 +372,10 @@ footer a{
 	}
 	
 	.contact-list a {
+		padding: 15px;
+	}
+  
+  .contact-list u {
 		padding: 15px;
 	}
 	
@@ -261,23 +395,64 @@ footer a{
 	h1 {
 		line-height: 1;
 		margin-bottom: 15px;
+    font-size: 48px;
 	}
+ h2 {
+    font-size: 48px;
+	}
+  
+  
 	
 	.content-wrap .image-cropper {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
+  max-width:100px;
+  max-height:100px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
   margin-left: auto;
-}
+  }
 	.content-wrap .image-cropper  img {
   display: inline;
   height: 100%;
+  max-width:100px;
+  max-height:100px;
   width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
+  margin: 0 auto;
+  }
+  
+  .projects .subproject-item h4{
+    margin-block-start:0px;
+  }
+  
+  .subproject-item .project-item-split {
+    padding: 5px;
+    border-bottom: 2px solid #0d132150;
+  }
+
+  .projects .project-item img {
+    width: 80%;  
+    max-width: 450px;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5px;
+    padding-top:25px;
+  }
+  
+  .projects .btn {
+    margin-top:5px;
+  }
+  
+  .side-projects .btn {
+    margin-top:5px;
+  }
+  
+  .projects .project-item .subproject-item img{ 
+    width: 70%;       
+    max-width: 200px;  
+    height: auto;
+	}
 
 .banner-wrap {
 	padding-bottom: 25%;
