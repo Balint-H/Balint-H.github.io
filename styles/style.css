@@ -440,6 +440,15 @@ footer a{
     padding-top:25px;
   }
   
+  .side-projects .project-item img {
+    width: 80%;  
+    max-width: 450px;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5px;
+    padding-top:25px;
+  }
+  
   .projects .btn {
     margin-top:5px;
   }
