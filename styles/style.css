@@ -71,7 +71,7 @@ summary {
   display: grid;
   grid-template-columns: 1.3fr 2fr;
   align-items: center; 
-  color: #0d132150;
+  color: #000000;
   font-size: 17px;
   border-bottom: 2px solid #0d132150;
   column-gap: 20px;
