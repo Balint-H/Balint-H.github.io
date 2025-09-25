@@ -138,7 +138,7 @@ h2 {
 	max-width: 800px;
 	width: 90%;
 	margin: 0 auto;
-	padding: 60px 0;
+	padding: 60px 0 30px 0;
 }
 
 p {
@@ -208,6 +208,7 @@ header {
 
 .projects .project-item p{
   text-align: justify;
+  margin:0px;
 }
 
 .projects image
@@ -387,6 +388,14 @@ footer a{
 	background-position: 50% 50%;
 }
 
+.projects .btn {
+    margin-top:5px;
+  }
+  
+  .side-projects .btn {
+    margin-top:5px;
+  }
+
 }
 
 
@@ -398,7 +407,7 @@ footer a{
     font-size: 48px;
 	}
  h2 {
-    font-size: 48px;
+    font-size: 32px;
 	}
   
   
