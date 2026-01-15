@@ -415,8 +415,8 @@ footer a{
 	.content-wrap .image-cropper {
   width: 100%;
   height: 100%;
-  max-width:100px;
-  max-height:100px;
+  max-width:130px;
+  max-height:130px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -425,8 +425,8 @@ footer a{
 	.content-wrap .image-cropper  img {
   display: inline;
   height: 100%;
-  max-width:100px;
-  max-height:100px;
+  max-width:130px;
+  max-height:130px;
   width: auto;
   margin: 0 auto;
   }
