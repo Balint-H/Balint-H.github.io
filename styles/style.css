@@ -67,6 +67,11 @@ h2{
 	font-size: 32px;
 }
 
+.content-wrap .btna{
+	color: #75bab5ff;;
+}
+
+
 summary {
   display: grid;
   grid-template-columns: 1.3fr 2fr;
@@ -195,6 +200,10 @@ header {
 }
 
 .projects .btn:hover {
+	background: rgba(101,170,165, 80%);
+}
+
+.side-projects .btn:hover {
 	background: rgba(101,170,165, 80%);
 }
 
@@ -456,6 +465,10 @@ footer a{
     display: block;
     padding-bottom: 5px;
     padding-top:25px;
+  }
+  
+  .header .btn {
+    margin-top:5px;
   }
   
   .projects .btn {
