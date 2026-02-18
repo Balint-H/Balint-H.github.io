@@ -170,7 +170,7 @@ p {
 ------------------------------*/
 header {
 	background: #1d2d44ff;
-	color: #FBFAEE;
+	color: #FFFFFF;
 }
 
 
@@ -256,7 +256,7 @@ header {
 ------------------------------*/
 .side-projects {
 	background: #3E5775;
-	color: #FBFAEE;
+	color: #FFFFFF;
 }
 
 .banner {
@@ -276,12 +276,12 @@ header {
 ------------------------------*/
 footer {
 	background: #1d2d44ff;
-	color: #FBFAEE;
+	color: #FFFFFF;
 	text-align: center;
 }
 
 footer a{
-	color: #FBFAEE;
+	color: #FFFFFF;
 }
 
 .contact-list {
