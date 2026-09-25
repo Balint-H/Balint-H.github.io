@@ -68,7 +68,17 @@ h2{
 }
 
 .content-wrap .btna{
-	color: #75bab5ff;;
+	color: #FFFFFF;
+	background: rgb(101,170,165);
+	text-decoration: none;
+	padding: 8px 14px;
+	border-radius: 4px;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.content-wrap .btna:hover {
+	background: rgba(101,170,165, 80%);
 }
 
 
